@@ -1,5 +1,5 @@
 #台科大網路流量監控
-下載地址： <br/ >
+下載地址： https://goo.gl/pfRcWZ <br/ >
 <br/ >
 這是一個可以自動把 http://network.ntust.edu.tw/ 上的流量統計爬下來的小工具，並會在總流量超過 4500M 時跳泡泡提醒<br/ >
 <br/ >
