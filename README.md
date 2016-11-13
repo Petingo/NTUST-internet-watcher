@@ -12,17 +12,17 @@ Update 2016/11/13 19:30 bug 修復
 
 第一次使用時，輸入要監控的IP並按下確認<br/ >
 <br/ >
-<img src="http://imgur.com/C0WvxkO.jpg">
+<img src="https://github.com/Petingo/NTUST_internet_watcher/blob/master/inst01.png">
 <br/ >
 <br/ >
 將程式最小化時，會自動進入右下角的隱藏圖示列常駐，將游標指上即可查看流量<br/ >
 <br/ >
-<img src="http://imgur.com/Oa76zQc.jpg">
+<img src="https://github.com/Petingo/NTUST_internet_watcher/blob/master/inst02.png">
 <br/ >
 <br/ >
 若要註冊／註銷開機自動啟動，請以系統管理員身分執行程式並將該選項打勾<br/ >
 <br/ >
-<img src="http://imgur.com/qkXtgQY.jpg">
+<img src="https://github.com/Petingo/NTUST_internet_watcher/blob/master/inst03.png">
 <br/ >
 <br/ >
 <br/ >
