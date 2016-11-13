@@ -148,17 +148,26 @@ namespace Internet_watcher
                 System.IO.StreamReader reader = new System.IO.StreamReader(responseStream, Encoding.GetEncoding("UTF-8"));
                 string srcString = reader.ReadToEnd();
 
-                string[] stringSeparators_source = new string[] { "<td>" };
+                string[] stringSeparators_source = new string[] { "<td>", "</tr>","<table>" };
                 string[] result = srcString.Split(stringSeparators_source, StringSplitOptions.RemoveEmptyEntries);
-                download = "下載：" + result[2].Replace(" ", "").Replace("</td>", "").Replace("</tr><tr>", "").Replace("\n", "").Replace("\t", "").Replace("\r", "");
-                upload = "上傳：" + result[3].Replace(" ", "").Replace("</td>", "").Replace("</tr><tr>", "").Replace("\n", "").Replace("\t", "").Replace("\r", "");
-                total = "總計：" + result[4].Replace(" ", "").Replace("</td>", "").Replace("</tr><tr>", "").Replace("\n", "").Replace("\t", "").Replace("\r", "");
+                download = "下載：" + result[3].Replace(" ", "").Replace("</td>", "").Replace("\n", "").Replace("\t", "").Replace("\r", "");
+                upload = "上傳：" + result[4].Replace(" ", "").Replace("</td>", "").Replace("\n", "").Replace("\t", "").Replace("\r", "");
+                total = "總計：" + result[5].Replace(" ", "").Replace("</td>", "").Replace("\n", "").Replace("\t", "").Replace("\r", "");
                 label_download.Text = download;
                 label_upload.Text = upload;
                 label_total.Text = total;
 
                 string totalNum_s = result[4].Replace(" ", "").Replace("</td>", "").Replace("</tr><tr>", "").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("(M)", "").Replace(",","");
-                int totalNum = Int32.Parse(totalNum_s);
+                int totalNum = 0;
+                if (totalNum_s != "") {
+                    try {
+                        totalNum = Int32.Parse(totalNum_s);
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
+                }
                 if(totalNum > 4500)
                 {
                     notifyIcon.ShowBalloonTip(1000, "流量警告！", "目前流量" + total, ToolTipIcon.Info);
