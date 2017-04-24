@@ -1,4 +1,4 @@
-*目前有 bug QQ
+<h1>目前有 bug 會查不到東東 QQ<h1/ > <br><br>
 Update 2016/11/13 19:30 bug 修復<br>
 Update 2016/11/14 00:14 跨日 bug 處理
 
